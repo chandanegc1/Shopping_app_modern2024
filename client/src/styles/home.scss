@@ -1,9 +1,15 @@
+
+*{
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
+}
 .container{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .section1{
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     margin-top: 4rem;
     padding: 5%;
     display: flex;
@@ -12,9 +18,9 @@
     background-image: url(/Assets/img/hero4.png);
     background-size: cover;
     background-position: center;
-    height: 40vh;
+    height: 60vh;
     padding: 10vh;
-    width: 95%;
+    width: 98%;
     background-position:top 25% right 0px;
     text-align: center;
     justify-content: center;

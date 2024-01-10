@@ -1,0 +1,38 @@
+.section12345{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+  }
+  .form{
+  background-color: azure;
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 30px;
+  }
+  
+  .form input{
+    margin: 10px 0px;
+    border-radius: 1px;
+    padding: 10px;
+    border: 0.1px solid gray;
+    outline: none;
+    width: 15rem;
+    height: 3rem; 
+    font-size: 1rem;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }
+
+  .form button{
+    background-color: #088178;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+    width: 15rem;
+    font-size: 1rem; 
+    border-radius: 3px;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }

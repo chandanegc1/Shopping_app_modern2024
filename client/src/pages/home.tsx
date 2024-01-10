@@ -6,9 +6,7 @@ import { Link } from "react-router-dom";
 import "../styles/home.scss"
 import Products from "./product";
 // import scrollToTop from "./goToTop";
-// import { useDispatch, useSelector } from "react-redux";
-// import axios from "axios";
-// import { postcarturl } from "./APIUrl";
+
 
 
 
