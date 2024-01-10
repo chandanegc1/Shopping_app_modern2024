@@ -32,6 +32,20 @@ function Products(  ) {
     },
     {
         name:"t-shirt",
+        img:"/Assets/img/products/f3.jpg",
+        brand:"chine",
+        _id:"eere",
+        price:"129$"
+    },
+    {
+        name:"t-shirt",
+        img:"/Assets/img/products/f3.jpg",
+        brand:"chine",
+        _id:"eere",
+        price:"129$"
+    },
+    {
+        name:"t-shirt",
         img:"/Assets/img/products/f4.jpg",
         brand:"chine",
         _id:"eere",

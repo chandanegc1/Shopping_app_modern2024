@@ -1,4 +1,11 @@
+.container{
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
 .section1{
+    margin-top: 4rem;
     padding: 5%;
     display: flex;
     flex-direction: column;
@@ -6,8 +13,9 @@
     background-image: url(/Assets/img/hero4.png);
     background-size: cover;
     background-position: center;
-    height: 100vh;
-    width: 100%;
+    height: 40vh;
+    padding: 10vh;
+    width: 90%;
     background-position:top 25% right 0px;
     text-align: center;
     justify-content: center;
