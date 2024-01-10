@@ -69,6 +69,7 @@ function App() {
             
               <Route path="/admin/transaction/:id" element={<TransactionManagement />} />
             {/* </Route>; */}
+            
 
         </Routes>
         </Suspense>
