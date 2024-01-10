@@ -11,13 +11,13 @@
     width: 12%;
     min-width: 160px;
     border: 1px solid gray;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 5px;
+    border-radius: 5px;
   }
   .product-images img {
     cursor: pointer;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 3px;
     border: 1px solid gray;
   }
   
@@ -39,25 +39,22 @@
       padding-top: 10px;
     }
   }
+  
   .shop-cart {
     cursor: pointer;
-    border: 1px solid transparent;
+    // border: 1px solid transparent;
   }
-  .shop img {
-    width: 25px;
-    height: 25px;
-  }
+  
   .shop button {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding-right: 5px;
+    padding: 4px;
     width: 40px;
-    background-color: #088178;
-    box-shadow: 1px 1px 1px 1px #084769;
+    border: 4px solid transparent;
+    background-color: transparent;
+    font-size: 23px;
+    cursor: pointer;
   }
   .shop button:active {
-    box-shadow: none;
+    font-size: 27px;
+    border: none;
   }
   

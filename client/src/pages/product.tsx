@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 // import scrollToTop from "../Componants/goToTop.js";
 import { useNavigate } from "react-router-dom";
 import "../styles/product.scss"
+import { FaCartPlus } from "react-icons/fa";
 // import { producturl } from "./APIUrl.js";
 // import { carturl } from "./APIUrl.js";
 // import { useDispatch } from "react-redux";
@@ -119,12 +120,7 @@ function Products(  ) {
                   </div>
                   <div>
                     <button>
-                      <img
-                        className="shop-cart"
-                        // onClick={() => addToCart(Product)}
-                        src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png"
-                        alt=""
-                      />
+                        <FaCartPlus/>
                     </button>
                   </div>
                 </div>
