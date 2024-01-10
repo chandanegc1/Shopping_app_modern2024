@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/login.scss";
+import { FcGoogle } from "react-icons/fc";
 
-function Shipping() {
+function Login() {
   // scrollToTop();
 
   const navigate = useNavigate();
@@ -39,61 +40,53 @@ function Shipping() {
   };
   return (
     <div className="shadow">
+      {/* <div className="section123">
+        <h1>#readmore</h1>
+        <p>Read all case studies about aur product! </p>
+      </div> */}
+
       <div className="login">
-        <div className="container" style={{marginTop:"3%" }}>
+        <div className="container">
         <form onSubmit={handleSubmit}>
-          <p>SHIPPING ADDRESS</p>
+          <h2>Login</h2>
           <br />
+          <p>Gender</p>
           <input
             type="text"
             required
             name="fullname"
-            placeholder="Adress..."
+            placeholder="Gender"
             onChange={handleInputChange}
           />
           <br />
-          <br />
+          <p>Date of Birth</p>
           <input
             type="email"
             required
             name="email"
-            placeholder="City..."
+            placeholder="Date of Birth"
             onChange={handleInputChange}
           />
           <br />
           <br />
-          <input
-            type="text"
-            name="subject"
-            placeholder="State..."
-            onChange={handleInputChange}
-          />
-          <br />
-          <br />
-          <input
-            type="text"
-            required
-            name="message"
-            placeholder="Country..."
-            onChange={handleInputChange}
-          />
-          <br />
-          <br />
-          <input
-            type="text"
-            required
-            name="message"
-            placeholder="Pincode..."
-            onChange={handleInputChange}
-          />
-          <br />
-          <br />
-          <button style={{color:"white"}}>PAY NOW</button>
+          <p className="sign">Already Signed in</p> <br />
+          <button>Submit</button><br /><br /><br />
         </form>
+          <button className="google"><FcGoogle/><span>Sign in with Google</span></button>
         </div>
       </div>
+      {/* <div className="section6">
+        <div className="describe">
+          <h2>Sing Up For Newsletters</h2>
+          <p>Get E-mail updates about aur latest shop and special offers</p>
+        </div>
+        <div className="inp">
+          <input type="text" placeholder="Your E-mail address" />
+          <button>Sign Up</button>
+        </div>
+      </div> */}
     </div>
   );
 }
 
-export default Shipping;
+export default Login;

@@ -4,6 +4,8 @@ import {BrowserRouter as Router , Routes , Route} from "react-router-dom"
 import Loader from "./components/loader";
 import Header from "./components/header";
 import Shipping from "./pages/shippping";
+import Login from "./pages/login";
+import Orders from "./pages/orders";
 
 const Home = lazy(()=> import("./pages/home"));
 const Cart = lazy(()=> import("./pages/cart"));
@@ -41,6 +43,8 @@ function App() {
           <Route path="/search" element={<Search/>}/>ch
           <Route path="/cart" element={<Cart/>}/>
           <Route path="/shipping" element={<Shipping/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/orders" element={<Orders/>}/>
 
           {/* admin route */}
 

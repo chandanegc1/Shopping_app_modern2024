@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 // import axios from "axios";
 // import scrollToTop from "../Componants/goToTop.js";
 import { useNavigate } from "react-router-dom";
@@ -17,41 +18,41 @@ function Products(  ) {
         _id:"eere",
         price:"129$"
     },
-    {
-        name:"t-shirt",
-        img:"/Assets/img/products/f2.jpg",
-        brand:"chine",
-        _id:"eere",
-        price:"129$"
-    },
-    {
-        name:"t-shirt",
-        img:"/Assets/img/products/f3.jpg",
-        brand:"chine",
-        _id:"eere",
-        price:"129$"
-    },
-    {
-        name:"t-shirt",
-        img:"/Assets/img/products/f3.jpg",
-        brand:"chine",
-        _id:"eere",
-        price:"129$"
-    },
-    {
-        name:"t-shirt",
-        img:"/Assets/img/products/f3.jpg",
-        brand:"chine",
-        _id:"eere",
-        price:"129$"
-    },
-    {
-        name:"t-shirt",
-        img:"/Assets/img/products/f4.jpg",
-        brand:"chine",
-        _id:"eere",
-        price:"129$"
-    },
+    // {
+    //     name:"t-shirt",
+    //     img:"/Assets/img/products/f2.jpg",
+    //     brand:"chine",
+    //     _id:"eere",
+    //     price:"129$"
+    // },
+    // {
+    //     name:"t-shirt",
+    //     img:"/Assets/img/products/f3.jpg",
+    //     brand:"chine",
+    //     _id:"eere",
+    //     price:"129$"
+    // },
+    // {
+    //     name:"t-shirt",
+    //     img:"/Assets/img/products/f3.jpg",
+    //     brand:"chine",
+    //     _id:"eere",
+    //     price:"129$"
+    // },
+    // {
+    //     name:"t-shirt",
+    //     img:"/Assets/img/products/f3.jpg",
+    //     brand:"chine",
+    //     _id:"eere",
+    //     price:"129$"
+    // },
+    // {
+    //     name:"t-shirt",
+    //     img:"/Assets/img/products/f4.jpg",
+    //     brand:"chine",
+    //     _id:"eere",
+    //     price:"129$"
+    // },
   ]);
 //   const [loading, setLoading] = useState(false);
 //   let login = localStorage.getItem("user");
