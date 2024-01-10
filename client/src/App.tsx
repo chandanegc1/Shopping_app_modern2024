@@ -2,6 +2,7 @@ import "./styles/app.scss"
 import { lazy , Suspense } from "react"
 import {BrowserRouter as Router , Routes , Route} from "react-router-dom"
 import Loader from "./components/loader";
+import Header from "./components/header";
 
 const Home = lazy(()=> import("./pages/home"));
 const Cart = lazy(()=> import("./pages/cart"));
@@ -32,6 +33,7 @@ function App() {
 
   return (
       <Router>
+        <Header/>
         <Suspense fallback={<Loader/>}>
         <Routes>
           <Route path="/" element={<Home/>}/>ch
@@ -69,7 +71,7 @@ function App() {
             
               <Route path="/admin/transaction/:id" element={<TransactionManagement />} />
             {/* </Route>; */}
-            
+
 
         </Routes>
         </Suspense>

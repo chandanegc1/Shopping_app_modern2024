@@ -9,6 +9,13 @@
     padding: 0;
     box-sizing: border-box;
   }
+  body{
+    user-select: none;
+  }
+
+  $color1:white;
+  $color2:rgb(46 ,46 ,46);
+  $color3:rgb(0 ,104 ,136);
   
   a {
     text-decoration: none;
@@ -25,13 +32,72 @@
     color: rgb(0, 195, 0);
   }
   
-  @import "admin-styles/mixin";
+  @import "admin-styles/mixin";       //mixing file importing is first then other file import
   
   @import "admin-styles/dashboard";
   @import "admin-styles/products";
   @import "admin-styles/chart";
   @import "admin-styles/dashboardapp";
   @import "admin-styles/mediaquery";
+
+
+
+.header{
+  @include flex(row , flex-end ,stretch ,1.2rem);
+  position: fixed;
+  padding:0.9rem ;
+  float: right;
+  width: 98vw;
+
+  a{
+    color: $color2;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+
+    &:hover{
+      color: $color3;
+    }
+  }
+
+  button{
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: transparent;
+    &:hover{
+      color: $color3;
+    }
+  }
+
+  dialog{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 12px;
+    width: 100px;
+    margin-top: 4rem;
+    margin-right: 50px;
+    position: absolute;
+    left: calc(100% - 100px);  //understand
+    top: 8%;
+    background-color: rgba(153, 143, 143, 0.211);
+    
+    >div{
+      @include flex(col ,flex-start ,center , 0.2rem);
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
   
   .admin-container {
     @include grid(1fr 4fr, 2rem);
