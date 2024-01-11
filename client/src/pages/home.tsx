@@ -5,6 +5,7 @@
 import { Link } from "react-router-dom";
 import "../styles/home.scss"
 import Products from "./product";
+import produxt from "./data";
 // import scrollToTop from "./goToTop";
 
 
@@ -36,10 +37,20 @@ function HOme() {
         </div>
       </div>
 
-      {/* {/* {<Products start={0} end={8} />} */}
-      <Products/>
-      <Products/>
-      <Products/>
+      <div className="flex">
+          {
+           produxt.map(product=>(
+            <div className="search-product">
+               <Products
+                 name={product.name}
+                 img={product.img}
+                 brand={product.brand}
+                 _id={product._id}
+                 price={product.price}
+               />
+            </div>
+          ))}
+         </div>
 
       {/* {
         <div className="section4">

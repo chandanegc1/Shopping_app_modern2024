@@ -1,6 +1,7 @@
 import { useState,  useEffect } from "react";
 import "../styles/cart.scss"
 import { FaPlus, FaTrash } from "react-icons/fa";
+import produxt from "./data";
 // import axios from "axios";
 // import scrollToTop from "./goToTop";
 // import { allcarturl, carturl, postcarturl } from "./APIUrl";
@@ -17,29 +18,7 @@ function Cart() {
 
 
   const [loading, setLoading] = useState(false);
-  const [users, setUsers] = useState([
-    {
-      name:"t-shirt",
-      img:"/Assets/img/products/f3.jpg",
-      brand:"chine",
-      _id:"eereu",
-      price:"129$"
-  },
-  {
-      name:"t-shirt",
-      img:"/Assets/img/products/f3.jpg",
-      brand:"chine",
-      _id:"eer",
-      price:"129$"
-  },
-  {
-      name:"t-shirt",
-      img:"/Assets/img/products/f4.jpg",
-      brand:"chine",
-      _id:"eere",
-      price:"129$"
-  }
-  ]);
+  const [users, setUsers] = useState(produxt);
 
   useEffect(() => {
     const fetch = async () => {
@@ -88,10 +67,6 @@ function Cart() {
   }
   return (
     <>
-      <div className="section123">
-        <h1>#readmore</h1>
-        <p>Read all case studies about aur product! </p>
-      </div>
       <div className="cart">
         <table width="100%" className="tbl">
           <div className="size">
@@ -106,7 +81,7 @@ function Cart() {
               </tr>
             </thead>
             <div className="scroll">
-              {loading ? users.map((Product) => (
+              {loading ? users.slice(7,14).map((Product) => (
                 <tbody>
                   <td className="delete" onClick={() => handleDeleteItem(Product._id)}><FaTrash/></td>
                   <td><img src={Product.img} alt="" /></td>

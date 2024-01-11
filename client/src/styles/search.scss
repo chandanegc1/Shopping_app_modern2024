@@ -1,15 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .product-search-page{
     display: flex;
-    min-height: calc(100vh - 6.5vh);
+    height: 100vh;
 }
-aside{
-    min-width: 20rem;
-    padding: 2rem;
+.aside{
+    height: 99vh;
+    overflow-x: scroll;
+    padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     box-shadow: 2px 5px 10px rgba(0 ,0 , 0 , 0.247);
+    border: 1px solid;
     >div{
+        padding: 3rem 0;
         >input ,>select{
             width: 100%;
             padding: 1rem;
@@ -20,9 +27,10 @@ aside{
         }
     }
 }
+
 main{
     width: 100%;
-    padding: 0 2rem;
+    padding: 2rem;
     >input{
         width: 50%;
         border-radius: 5px;
@@ -39,4 +47,11 @@ article{
         cursor: pointer;
 
     }
+}
+.flex{
+    height: 76vh;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 150px));
+    gap: 15px;
 }

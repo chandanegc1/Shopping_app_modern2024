@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Products from "./product";
 import "../styles/search.scss"
-
+import produxt from "./data.ts"
 
 const Search = () => {
   const [search , setSearch] = useState("");
@@ -15,7 +15,7 @@ const Search = () => {
 
   return (
     <div className="product-search-page">
-      <aside>
+      <div className="aside">
         <h2>Filter</h2>
       <div>
         <h4>Sort</h4>
@@ -44,7 +44,7 @@ const Search = () => {
           <option value="">Sample1</option>
         </select>
       </div>
-      </aside>
+      </div>
       
       <main>
         <h1>Products</h1>
@@ -54,10 +54,22 @@ const Search = () => {
          onChange={(e)=>setSearch(e.target.value)}
         />
 
-        <div className="search-product">
-          <Products/>
-        </div>
-
+        
+         <div className="flex">
+          {
+           produxt.map(product=>(
+            <div className="search-product">
+               <Products
+                 name={product.name}
+                 img={product.img}
+                 brand={product.brand}
+                 _id={product._id}
+                 price={product.price}
+               />
+            </div>
+          ))}
+         </div>
+        
         <article>
           <button disabled={!isPrevPage} onClick={()=>setPage((pre)=>pre-1)}>Pre</button>
           <span>
