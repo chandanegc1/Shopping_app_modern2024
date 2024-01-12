@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import validator from "validator";
 const schema = new mongoose.Schema({
     _id: {
         type: String,
@@ -11,7 +12,8 @@ const schema = new mongoose.Schema({
     email: {
         type: String,
         unique: [true, "Email already exist"],
-        required: [true, "Please enter email"]
+        required: [true, "Please enter email"],
+        validator: validator.default.isEmail,
     },
     photo: {
         type: String,
@@ -34,3 +36,4 @@ const schema = new mongoose.Schema({
 }, {
     timestamps: true,
 });
+export const User = mongoose.model("User", schema);
