@@ -1,13 +1,27 @@
 import { User } from "../models/user.js";
-export const newUser = async (req, res, next) => {
-    try {
-        const { name, email, photo, gender, role, _id, dob } = req.body;
-        const user = await User.create({ name, email, photo, gender, role, _id, dob });
-        res.status(200).json({
+import { TryCatch } from "../middlewares/error.js";
+import ErrorHandler from "../utils/utility-class.js";
+export const newUser = TryCatch(async (req, res, next) => {
+    const { _id, name, email, dob, gender, photo } = req.body;
+    let user = await User.findById(_id);
+    if (user) {
+        return res.status(201).json({
             success: true,
-            message: `welcome, ${user}`
+            message: `welcome, ${user.name}`,
         });
     }
-    catch (error) {
-    }
-};
+    if (!_id || !name || !email || !dob || !gender || !photo)
+        return next(new ErrorHandler("Please add all fields", 400));
+    user = await User.create({
+        name,
+        email,
+        _id,
+        dob: new Date(dob),
+        gender,
+        photo,
+    });
+    return res.status(201).json({
+        success: true,
+        message: user,
+    });
+});
